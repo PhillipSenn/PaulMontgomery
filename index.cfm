@@ -1,10 +1,6 @@
 <cfscript>
 param url.id = '';
-request.ico = 'png/icons8-rock-music-96.png' //icons8.com
-request.title = 'Paul Montgomery Music'
 include '/Inc/header.cfm'
-remoteAddrname = Left(cgi.REMOTE_ADDR,30)
-request.usr = new dbo.proc().exec('remoteAddr.where_remoteAddrname',remoteAddrname)
 if (IsDefined('url.songid')) {
 	song = Val(url.songid)
 	if (song) {
